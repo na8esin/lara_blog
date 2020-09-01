@@ -7,6 +7,10 @@ use App\User;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+    
+    }
     /**
      * Show the profile for the given user.
      *
