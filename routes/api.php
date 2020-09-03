@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    var_dump($request);
-    exit;
-    //return $request->user();
+    return $request->user();
 });
 
 Route::apiResource('photos', 'API\PhotoController');
