@@ -17,5 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::middleware('auth:api')->get('/token', function (Request $request) {
+    //return $request->user();
+    $token = $request->user()->createToken('token-name');
+    return $token->plainTextToken;
+});
+Route::middleware('auth:sanctum')->get('/sanctum/user', function (Request $request) {
+    return $request->user();
+});
 
 Route::apiResource('photos', 'API\PhotoController');
