@@ -26,4 +26,7 @@ Route::middleware('auth:sanctum')->get('/sanctum/user', function (Request $reque
     return $request->user();
 });
 
+Route::post('/login', 'LoginController@login');
+Route::post('/logout', 'LoginController@logout');
+
 Route::apiResource('photos', 'API\PhotoController');
