@@ -1,3 +1,8 @@
+# やりたいこと
+- jwtを使う
+- vueでspa認証
+- フォーム
+
 # route確認
 php artisan route:list
 
