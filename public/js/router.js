@@ -164,10 +164,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -714,7 +710,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "container" }, [
     _c(
       "form",
       {
@@ -726,8 +722,15 @@ var render = function() {
         }
       },
       [
-        _c("div", [
-          _c("label", [_vm._v("email")]),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-md-4 col-form-label text-md-right",
+              attrs: { for: "email" }
+            },
+            [_vm._v("email")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -738,7 +741,8 @@ var render = function() {
                 expression: "email"
               }
             ],
-            attrs: { type: "text" },
+            staticClass: "form-control",
+            attrs: { type: "email", id: "email" },
             domProps: { value: _vm.email },
             on: {
               input: function($event) {
@@ -751,17 +755,11 @@ var render = function() {
           }),
           _vm._v(" "),
           _vm.errors.email
-            ? _c("span", [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.errors.email[0]) +
-                    "\n            "
-                )
-              ])
+            ? _c("span", [_vm._v(_vm._s(_vm.errors.email[0]))])
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("div", [
+        _c("div", { staticClass: "form-group" }, [
           _c("label", [_vm._v("パスワード")]),
           _vm._v(" "),
           _c("input", {
@@ -786,17 +784,11 @@ var render = function() {
           }),
           _vm._v(" "),
           _vm.errors.password
-            ? _c("span", [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.errors.password[0]) +
-                    "\n            "
-                )
-              ])
+            ? _c("span", [_vm._v(_vm._s(_vm.errors.password[0]))])
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("button", [_vm._v("ログイン")])
+        _c("button", { staticClass: "btn btn-primary" }, [_vm._v("ログイン")])
       ]
     )
   ])
