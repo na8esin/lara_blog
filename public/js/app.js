@@ -1952,7 +1952,8 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get("/api/user").then(function (response) {
+    axios //.get("/api/user")
+    .get("/api/sanctum/user").then(function (response) {
       _this.user = response.data;
     });
   },
